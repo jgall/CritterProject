@@ -18,5 +18,14 @@ class SmellyCritter extends Critter{
     checkHealth();
   }
   
+  void snooze(){
+    //80% chance to sleep
+    if(random(0,10)<8){
+      health+=2;
+    } else {
+      health-=1;
+    }
+    checkHealth();
+  }
   
 }
