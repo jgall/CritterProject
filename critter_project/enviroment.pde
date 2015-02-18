@@ -8,5 +8,11 @@ class Enviroment {
       array.add(new SmellyCritter());
     }
   }
+  
+  void passDay(){
+    for(Critter c : array) {
+      c.passDay();
+    }
+  }
 }
 

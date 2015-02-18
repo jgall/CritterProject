@@ -2,6 +2,8 @@
 abstract class Critter{
   int health, age, luck;
   
+  void passDay(){
+  }
   void setAge(int age){
     this.age = age;
   }
