@@ -1,8 +1,16 @@
-class SmellyCritter extends Critter{
-  void eat(){
+class SmellyCritter extends Critter {
+
+  //should be run every day
+  void passDay() {
+    eat();
+    dance();
+    snooze();
+  }
+
+  void eat() {
     //40% chance to eat
-    if(random(0,10)<4){
-      if(health<100){
+    if (random(0, 10)<4) {
+      if (health<100) {
         health +=6;
       }
     } else {
@@ -10,22 +18,22 @@ class SmellyCritter extends Critter{
     }
     checkHealth();
   }
-  
-  void dance(){
-    if(this.age > 15){
+
+  void dance() {
+    if (this.age > 15) {
       health++;
     }
     checkHealth();
   }
-  
-  void snooze(){
+
+  void snooze() {
     //80% chance to sleep
-    if(random(0,10)<8){
+    if (random(0, 10)<8) {
       health+=2;
     } else {
       health-=1;
     }
     checkHealth();
   }
-  
 }
+
