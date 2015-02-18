@@ -1,22 +1,25 @@
 abstract class Critter{
   int health, age, luck;
   
-  void setAge(int _age){
-    age = _age;
+  void setAge(int age){
+    this.age = age;
   }
   int getAge(){
     return age;
   }
-  void setHealth(int _health){
-    health = _health;
+  void setHealth(int health){
+    this.health = health;
   }
   int getHealth(){
     return health;
   }
-  void setLuck(int _luck){
-    luck = _luck;
+  void setLuck(int luck){
+    this.luck = luck;
   }  
   int getLuck(){
     return luck;
+  }
+  String toString(){
+    return "Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
   }
 }
