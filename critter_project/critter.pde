@@ -25,6 +25,9 @@ abstract class Critter{
   }
   //finish this
   boolean calculateChances(int pct){
-    return true;
+    int temp = luck*10;
+    pct = (pct+luck)/2;
+    if(random(0,100)<pct) return true;
+    return false;
   }
 }
