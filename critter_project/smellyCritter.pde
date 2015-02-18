@@ -8,9 +8,14 @@ class SmellyCritter extends Critter{
     } else {
       health -=6;
     }
-    if(health > 100){
-      health = 100;
+    checkHealth();
+  }
+  
+  void dance(){
+    if(this.age > 15){
+      health++;
     }
+    checkHealth();
   }
   
   

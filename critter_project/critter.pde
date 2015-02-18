@@ -23,6 +23,9 @@ abstract class Critter{
   String toString(){
     return "Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
   }
+  void checkHealth(){
+    if(health > 100) health = 100;
+  }
   //finish this
   boolean calculateChances(int pct){
     int temp = luck*10;
