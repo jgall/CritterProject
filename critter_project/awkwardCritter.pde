@@ -55,4 +55,7 @@ class AwkwardCritter extends Critter{
     checkHealth();
   }
   
+  String toString(){
+    return "AwkwardCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
+  }
 }

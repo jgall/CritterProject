@@ -17,7 +17,7 @@ class Enviroment {
   
   void printStatus(){
     for(Critter c : array){
-      println("Critter: " + c);
+      println(c);
     }
   }
 }

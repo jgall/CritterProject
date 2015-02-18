@@ -44,5 +44,8 @@ class SmellyCritter extends Critter {
     }
     checkHealth();
   }
+  String toString(){
+    return "SmellyCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
+  }
 }
 

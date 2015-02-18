@@ -34,5 +34,9 @@ class UglyCritter extends Critter{
     }
     checkHealth();
   }
+  
+  String toString(){
+    return "UglyCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
+  }
 }
 
