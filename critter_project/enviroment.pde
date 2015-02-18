@@ -14,5 +14,11 @@ class Enviroment {
       c.passDay();
     }
   }
+  
+  void printStatus(){
+    for(Critter c : array){
+      println("Critter: " + c);
+    }
+  }
 }
 
