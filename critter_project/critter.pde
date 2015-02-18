@@ -1,3 +1,4 @@
+// abstrict Critter class
 abstract class Critter{
   int health, age, luck;
   
@@ -21,5 +22,9 @@ abstract class Critter{
   }
   String toString(){
     return "Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
+  }
+  //finish this
+  boolean calculateChances(int pct){
+    return true;
   }
 }
