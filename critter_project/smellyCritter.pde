@@ -4,7 +4,7 @@ class SmellyCritter extends Critter {
   //constructor
   SmellyCritter(){
     this.age = 0;
-    this.luck = random(0,10);
+    this.luck = int(random(0,10));
     this.health = 100;
     
   }

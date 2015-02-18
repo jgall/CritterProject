@@ -1,9 +1,9 @@
-class UglyCritter {
+class UglyCritter extends Critter{
   
   //constructor
   UglyCritter(){
     this.age = 0;
-    this.luck = random(0,10);
+    this.luck = int(random(0,10));
     this.health = 100;
   }
   //should be run every day
@@ -28,9 +28,9 @@ class UglyCritter {
   void snooze() {
     //50% chance to sleep
     if (random(0, 10)<5) {
-      health+=2;
+      health+=9;
     } else {
-      health-=1;
+      health-=2;
     }
     checkHealth();
   }
