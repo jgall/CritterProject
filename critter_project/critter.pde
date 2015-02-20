@@ -1,9 +1,10 @@
 // abstrict Critter class
 abstract class Critter{
   int health, age, luck;
+  boolean isALive;
   
-  void passDay(){
-  }
+  abstract void passDay();
+  
   void setAge(int age){
     this.age = age;
   }
