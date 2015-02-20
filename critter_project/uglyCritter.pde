@@ -42,7 +42,7 @@ class UglyCritter extends Critter {
     if (isAlive) {
       return "UglyCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
     } else {
-      return "UglyCritter-- I am DEAD!";
+      return "UglyCritter-- Age: " +this.age + ", Luck: " + this.luck + ", Health: " + this.health + " I am DEAD!";
     }
   }
 }

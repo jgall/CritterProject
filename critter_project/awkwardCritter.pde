@@ -64,7 +64,7 @@ class AwkwardCritter extends Critter {
     if (isAlive) {
     return "AwkwardCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
     } else {
-      return "AwkwardCritter-- I am DEAD!";
+      return "AwkwardCritter-- Age: " +this.age + ", Luck: " + this.luck + ", Health: " + this.health + " I am DEAD!";
     }
   }
 }

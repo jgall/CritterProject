@@ -32,7 +32,10 @@ abstract class Critter {
   }
   void checkHealth() {
     if (health > 100) health = 100;
-    if (health <= 0) isAlive = false;
+    if (health <= 0) {
+      isAlive = false;
+      health = 0;
+    }
   }
   //finish this
   boolean calculateChances(int pct) {

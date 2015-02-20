@@ -50,7 +50,7 @@ class SmellyCritter extends Critter {
     if(isAlive) {
     return "SmellyCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
     } else {
-      return "SmellyCritter-- I am DEAD!";
+      return "SmellyCritter-- Age: " +this.age + ", Luck: " + this.luck + ", Health: " + this.health + " I am DEAD!";
     }
   }
 }
