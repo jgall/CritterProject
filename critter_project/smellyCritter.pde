@@ -1,24 +1,26 @@
 class SmellyCritter extends Critter {
 
-  
+
   //constructor
-  SmellyCritter(){
+  SmellyCritter() {
+    isAlive = true;
     this.age = 0;
-    this.luck = int(random(0,10));
+    this.luck = int(random(0, 10));
     this.health = 100;
-    
   }
   //should be run every day
   void passDay() {
-    eat();
-    dance();
-    snooze();
-    this.age++;
+    if (isAlive) {
+      eat();
+      dance();
+      snooze();
+      this.age++;
+    }
   }
 
   void eat() {
     //40% chance to eat
-    if (random(0, 10)<4) {
+    if (calculateChances(40)) {
       if (health<100) {
         health +=6;
       }
@@ -37,15 +39,19 @@ class SmellyCritter extends Critter {
 
   void snooze() {
     //80% chance to sleep
-    if (random(0, 10)<8) {
+    if (calculateChances(80)) {
       health+=2;
     } else {
       health-=1;
     }
     checkHealth();
   }
-  String toString(){
+  String toString() {
+    if(isAlive) {
     return "SmellyCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
+    } else {
+      return "SmellyCritter-- I am DEAD!";
+    }
   }
 }
 

@@ -1,41 +1,46 @@
-class AwkwardCritter extends Critter{
-  
+class AwkwardCritter extends Critter {
+
   //constructor
-  AwkwardCritter(){
+  AwkwardCritter() {
+    isAlive = true;
     this.age = 0;
-    this.luck = int(random(0,10));
+    this.luck = int(random(0, 10));
     this.health = 100;
   }
-  
+
   //should be run every day
   void passDay() {
-    eat();
-    snooze();
-    yodel();
-    meditate();
-    this.age++;
-  }
-  
-  void yodel(){
-    if(health > 80 && luck > 7){
-      health+=3;
-    } else if(health > 80){
-      health+=2;
+    if (isAlive) {
+      eat();
+      snooze();
+      yodel();
+      meditate();
+      this.age++;
     }
   }
-  
-  void meditate(){
+
+  void yodel() {
+    if (health > 80 && luck > 7) {
+      health+=3;
+    } else if (health > 80) {
+      health+=2;
+    }
+    checkHealth();
+  }
+
+  void meditate() {
     //50% chance to meditate
-    if(random(0,2)>1){
+    if (calculateChances(50)) {
       health +=2;
     } else {
       health -=7;
     }
+    checkHealth();
   }
-  
+
   void eat() {
     //85% chance to eat
-    if (random(0, 10)<8.5) {
+    if (calculateChances(85)) {
       if (health<100) {
         health +=2;
       }
@@ -47,15 +52,20 @@ class AwkwardCritter extends Critter{
 
   void snooze() {
     //50% chance to sleep
-    if (random(0, 10)<5) {
+    if (calculateChances(50)) {
       health+=9;
     } else {
       health-=2;
     }
     checkHealth();
   }
-  
-  String toString(){
+
+  String toString() {
+    if (isAlive) {
     return "AwkwardCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
+    } else {
+      return "AwkwardCritter-- I am DEAD!";
+    }
   }
 }
+

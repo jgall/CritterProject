@@ -1,21 +1,24 @@
-class UglyCritter extends Critter{
-  
+class UglyCritter extends Critter {
+
   //constructor
-  UglyCritter(){
+  UglyCritter() {
+    isAlive = true;
     this.age = 0;
-    this.luck = int(random(0,10));
+    this.luck = int(random(0, 10));
     this.health = 100;
   }
   //should be run every day
   void passDay() {
-    eat();
-    snooze();
-    this.age++;
+    if (isAlive) {
+      eat();
+      snooze();
+      this.age++;
+    }
   }
 
   void eat() {
     //70% chance to eat
-    if (random(0, 10)<7) {
+    if (calculateChances(70)) {
       if (health<100) {
         health +=4;
       }
@@ -27,16 +30,20 @@ class UglyCritter extends Critter{
 
   void snooze() {
     //50% chance to sleep
-    if (random(0, 10)<5) {
+    if (calculateChances(50)) {
       health+=9;
     } else {
       health-=2;
     }
     checkHealth();
   }
-  
-  String toString(){
-    return "UglyCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
+
+  String toString() {
+    if (isAlive) {
+      return "UglyCritter-- Age: " + this.age + ", Luck: " + this.luck + ", Health: " + this.health;
+    } else {
+      return "UglyCritter-- I am DEAD!";
+    }
   }
 }
 
